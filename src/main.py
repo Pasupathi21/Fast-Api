@@ -32,16 +32,16 @@ app.add_middleware(
 )
 
 # ================ event call
-@app.on_event("startup")
-async def startup():
-    print("event started >>>>>>>>>>>>>")
+# @app.on_event("startup")
+# async def startup():
+#     print("event started >>>>>>>>>>>>>")
 
 # ============= all routes ===============================
 app.include_router(AppRouter)
 
-@app.on_event("shutdown")
-async def shoudown():
-    print("shoutdown >>>>>>>>>>>")
+# @app.on_event("shutdown")
+# async def shoudown():
+#     print("shoutdown >>>>>>>>>>>")
 
 if __name__ == '__main__':
     import uvicorn
